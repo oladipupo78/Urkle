@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+   <link href="css/materialize.min.css" rel="stylesheet">
+   <link href="css/fonts.css" rel="stylesheet">
+   <link href="css/popup.css" rel="stylesheet">
+   <link href="style.css" rel="stylesheet">
+   <link rel="stylesheet" href="./speech.css" />
+</head>
+
+<body>
+  <!-- CHROME EXTENSION POPUP -->
+  <div id="popup-wrapper">
+    <form id="configForm" name="configForm">
+      <table class="bordered">
+        <tr>
+          <td colspan="2" id="head-cell">
+            Urkle
+            <div class="switch" id="master-switch">
+              <label>
+                Off
+                <input type="checkbox" id="enabled" name="enabled" value="1">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr class="show-when-enabled">
+          <td>Font</td>
+          <td>
+            <label style="width:100%" for="opendyslexic">
+              <input name="font" id="opendyslexic" type="radio" value="opendyslexic" />
+              <span>Open Dyslexic</span>
+            </label>
+            <br>
+            <label style="width:100%" for="comicsans">
+              <input name="font" id="comicsans" type="radio" value="comicsans" />
+              <span>Comic Sans</span>
+            </label>
+	    <br>
+          <label style="width:100%" for="sign">
+              <input name="font" id="sign" type="radio" value="sign" />
+              <span>Sign language</span>
+          </label>
+           <br>
+           <label style="width:100%" for="lexend">
+              <input name="font" id="lexend" type="radio" value="lexend" />
+              <span>Lexend</span>
+           </label>
+           <br>
+           <label style="width:100%" for="lora">
+              <input name="font" id="lora" type="radio" value="lora" />
+              <span>Lora</span>
+           </label>
+          </td>
+        </tr>
+        <tr class="show-when-enabled">
+          <td>Font size</td>
+          <td>
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox" id="fontEnabled" name="fontEnabled" value="1">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+            <div class="show-when-ruler">
+              <p id="sp-width">Font size :
+                <label for="fontsize"></label>
+              </p>
+              <p class="range-field">
+                <input type="range" id="fontsize" name="fontsize" min="15" max="35" />
+              </p>
+            </div>
+          </td>
+	<tr class="show-when-enabled">
+          <td>Word spacing</td>
+          <td>
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox" id="spacingEnabled" name="spacingEnabled" value="1">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+            <div class="show-when-ruler">
+              <p id="sp-width">Word spacing :
+                <label for="spacingWidth"></label>
+              </p>
+              <p class="range-field">
+                <input type="range" id="spacingWidth" name="spacingWidth" min="5" max="20" />
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr class="show-when-enabled">
+          <td>Line spacing</td>
+          <td>
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox" id="lspacingEnabled" name="lspacingEnabled" value="1">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+            <div class="show-when-ruler">
+              <p id="sp-width">Line spacing :
+                <label for="lspacingWidth"></label>
+              </p>
+              <p class="range-field">
+                <input type="range" id="lspacingWidth" name="lspacingWidth" min="15" max="50" />
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr class="show-when-enabled">
+          <td>Ruler</td>
+          <td>
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox" id="rulerEnabled" name="rulerEnabled" value="1">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+            <div class="show-when-ruler">
+              <p id="p-width">Width:
+                <label for="rulerWidth"></label>
+              </p>
+              <p class="range-field">
+                <input type="range" id="rulerWidth" name="rulerWidth" min="10" max="50" />
+              </p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <table>
+      <tr class="show-when-enabled">
+        <div align="center">
+          <br>
+        <a href="#"><button id="button">Enable speech to text</button></a>
+        </div>
+      </tr>
+    </table>
+ <script type="text/javascript" src="popup.js"></script>
+ <script type="text/javascript" src="redirect.js"></script>
+</body>
+</html>
